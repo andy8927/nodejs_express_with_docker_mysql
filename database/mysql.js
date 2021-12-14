@@ -15,8 +15,8 @@ connection.connect(function(err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-const query = (queryString, params) => {
-    connection.query(queryString, function (error, results, fields) {
+const query = (queryString) => {
+    connection.query(queryString, function (error, results) {
         if (error) throw error;
         console.log(results)
         // connected!
